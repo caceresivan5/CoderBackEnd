@@ -1,10 +1,10 @@
 
 class Usuario {
-    constructor() {
-      this.nombre = "Ivan";
-      this.apellido = "Caceres";
-      this.libros = [{ titulo: "Odisea", autor: "Homero" }];
-      this.mascotas = ["Perro", "Gato", "Pez"];
+    constructor(Nombre, Apellido, Libros, Mascotas) {
+      this.nombre = Nombre;
+      this.apellido = Apellido;
+      this.libros = [Libros];
+      this.mascotas = [Mascotas];
     }
     getFullName() {
       return `El nombre del usuario es ${this.nombre + " " + this.apellido}`;
@@ -24,7 +24,13 @@ class Usuario {
     }
   }
   
-  const res = new Usuario();
+  const res = new Usuario(
+    Nombre = 'Ivan',
+    Apellido = 'Caceres',
+    Libros = {titulo: 'Odisea', autor: 'Homero'},
+    Mascotas = {M1:"Perro", M2:"Gato", M3:"Pez"}
+
+  );
   
   res.addMascota("Tortuga");
   res.addBook("Inferno" , "Dan Brown");
